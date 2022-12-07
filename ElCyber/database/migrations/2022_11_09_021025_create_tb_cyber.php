@@ -14,10 +14,10 @@ class CreateTbCyber extends Migration
     public function up()
     {
         Schema::create('tb_cyber', function (Blueprint $table) {
+            $table->increments('ID');
             $table->string('Usuario');
             $table->integer('NumeroCompu');
             $table->time('Tiempo');
-            $table->date('Fecha');
             $table->timestamps();
         });
     }

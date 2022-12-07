@@ -28,21 +28,22 @@
             </div>
         @endforeach
     @endif
-        <form method="post" action="saveR">
+        <form method="post" action="{{route('cons.update', $cyber->ID)}}">
             @csrf
+            {!!method_field('PUT')!!}
             <div>
                 <label class="form-label">Usuario:</label>
-                <input type="text" class="form-control" name="Usuario" value="{{old('Usuario')}}">
+                <input type="text" class="form-control" name="Usuario" value="{{$cyber->Usuario}}">
                 <p lass="fv-bold text-danger">{{$errors->first('Usuario')}}</p>
             </div>
             <div>
                 <label class="form-label">No. Computadora:</label>
-                <input type="number" class="form-control" name="NumeroCompu" value="{{old('NumeroCompu')}}">
+                <input type="number" class="form-control" name="NumeroCompu" value="{{$cyber->NumeroCompu}}">
                 <p lass="fv-bold text-danger">{{$errors->first('NumeroCompu')}}</p>
             </div>
             <div>
                 <label class="form-label">Tiempo:</label>
-                <input type="time" class="form-control" name="Tiempo" value="{{old('Tiempo')}}">
+                <input type="time" class="form-control" name="Tiempo" value="{{$cyber->Tiempo}}">
                 <p lass="fv-bold text-danger">{{$errors->first('Tiempo')}}</p>
             </div>
             <div class="text-center">

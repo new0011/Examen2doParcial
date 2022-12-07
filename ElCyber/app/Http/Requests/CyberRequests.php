@@ -24,9 +24,9 @@ class CyberRequests extends FormRequest
     public function rules()
     {
         return [
-            "user"=>"required",
-            "comp"=>"required",
-            "dates"=>"required"
+            "Usuario"=>"required",
+            "NumeroCompu"=>"required",
+            "Tiempo"=>"required"
         ];
     }
 }

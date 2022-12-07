@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CyberController;
+use App\Http\Controllers\controlBD;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,9 @@ use App\Http\Controllers\CyberController;
 |
 */
 
-Route::get('/', [CyberController::class, 'form'])->name('Nform');
-Route::get('/cons', [CyberController::class, 'cons'])->name('Ncons');
-Route::post('/saveR', [CyberController::class, 'saveR'])->name('NsaveR');
+Route::get('/form', [controlBD::class, 'create'])->name('form.create');
+Route::get('/cons', [controlBD::class, 'index'])->name('cons.index');
+Route::post('/saveR', [controlBD::class, 'store'])->name('saveR.store');
+Route::get('/form/{id}/upF', [controlBD::class, 'edit'])->name('upF.edit');
+Route::put('/form/{id}', [controlBD::class, 'update'])->name('cons.update');
+Route::delete('/cons/{id}', [controlBD::class, 'destroy'])->name('cons.destroy');

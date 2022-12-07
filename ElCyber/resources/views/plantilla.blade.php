@@ -48,7 +48,7 @@
 
     <nav class="navbar navbar-dark" style="background-color: black;" aria-label="Barra Atigua">
         <div class="container-fluid">
-            <a href="inicio" class="mb-3 me-2 mb-md-0 text-light text-decoration-none lh-1 {{request()->routeIS('NInicio')}}">
+            <a href="/form" class="mb-3 me-2 mb-md-0 text-light text-decoration-none lh-1 {{request()->routeIS('form.create')}}">
                 <svg class="bi" width="35" height="30"><use xlink:href="#house"/></svg>
             </a>
             <p class="text-light display-6 mb-3 mb-md-0" style="font-size: 30px "><b>Ciber Yoshaaaaaa</b></p>
@@ -59,10 +59,10 @@
             <div class="collapse navbar-collapse" id="navbarsExample01">
                 <ul class="navbar-nav me-auto mb-2">
                     <li class="nav-item">
-                        <a class="nav-link {{request()->routeIS('Nform')}}" href="/">Formulario</a>
+                        <a class="nav-link {{request()->routeIS('form.create')}}" href="/">Formulario</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{request()->routeIS('Ncons')}}" href="cons">Consulta</a>
+                        <a class="nav-link {{request()->routeIS('cons.index')}}" href="/cons">Consulta</a>
                     </li>
                 </ul>
             </div>
